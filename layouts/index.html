@@ -5,7 +5,7 @@
    {{ end }}
    {{ if .Site.Params.showProjects }}
       {{ with .Site.GetPage "section" "projects/creations" }}
-         {{ .Scratch.Set "sectionId" "projects" }}
+         {{ .Scratch.Set "sectionId" (default "Projects" .Site.Params.projectsAlternateName) }}
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}
