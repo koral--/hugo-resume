@@ -20,7 +20,7 @@
       {{ end }}
       {{ if .Site.Params.showProjects }}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#projects">Projects</a>
+            <a class="nav-link js-scroll-trigger" href="/#{{ default "projects" (anchorize .Site.Params.projectsAlternateName) }}">{{ default "projects" (anchorize .Site.Params.projectsAlternateName) }}</a>
           </li>
       {{ end }}
       {{ if .Site.Params.showOpenSource }}
